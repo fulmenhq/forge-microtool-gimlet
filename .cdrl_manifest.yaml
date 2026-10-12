@@ -1,0 +1,48 @@
+template:
+  name: forge-microtool-gimlet
+  category: microtool
+  subcategory: gimlet
+  language: go
+  version: 0.1.0
+  description: "Fulmen Microtool template for single-purpose CLI tools using gofulmen library"
+  standards:
+    - fulmen-forge-microtool-standard.md
+    - fulmen-template-cdrl-standard.md
+  parameters:
+    - key: REPO_NAME
+      description: "Repository name (e.g., fulmen-fixtures)"
+      default: "forge-microtool-gimlet"
+      required: true
+    - key: BINARY_NAME
+      description: "Binary name (e.g., fixtures)"
+      default: "gimlet"
+      required: true
+    - key: MODULE_PATH
+      description: "Go module path (e.g., github.com/fulmenhq/fulmen-fixtures)"
+      default: "forge-microtool-gimlet"
+      required: true
+    - key: DESCRIPTION
+      description: "Tool description"
+      default: "A single-purpose CLI tool template"
+      required: true
+    - key: AUTHOR_NAME
+      description: "Author name"
+      default: "FulmenHQ"
+      required: true
+    - key: AUTHOR_EMAIL
+      description: "Author email"
+      default: "steward@fulmenhq.com"
+      required: true
+    - key: YEAR
+      description: "Copyright year"
+      default: "2025"
+      required: true
+    - key: ENV_PREFIX
+      description: "Environment variable prefix (e.g., GIMLET_)"
+      default: "GIMLET_"
+      required: true
+  dependencies:
+    - gofulmen: v0.1.25
+    - cobra: v1.8.0
+  cdrl_guide: docs/development/fulmen_cdrl_guide.md
+  ci_workflow: .github/workflows/ci.yml

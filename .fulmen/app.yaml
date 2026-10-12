@@ -1,0 +1,40 @@
+# Fulmen Application Identity
+# This file defines the application's identity metadata for integration with
+# the Fulmen ecosystem (gofulmen, Crucible, etc.)
+#
+# CDRL WORKFLOW: When customizing this template (Clone → Degit → Refit → Launch)
+# update these values FIRST, then run `make validate-app-identity` to find
+# hardcoded references to "gimlet" that need updating.
+app:
+  # Vendor/organization name (used for config paths, namespaces)
+  # Example: "acme" for Acme Corp, "myorg" for your organization
+  # CDRL: Change "fulmenhq" to your organization name
+  vendor: fulmenhq
+  # Binary name (used for executable, config files, env var prefix)
+  # Example: "fixtures", "data-sync", "asset-deploy"
+  # CDRL: Change "gimlet" to your microtool name
+  binary_name: gimlet
+  # Environment variable prefix (MUST end with underscore)
+  # Used for all env vars: {env_prefix}LOG_LEVEL, {env_prefix}CONFIG_PATH, etc.
+  # Example: "FIXTURES_" → FIXTURES_LOG_LEVEL, "SYNC_" → SYNC_CONFIG_PATH
+  # CDRL: Change "GIMLET_" to your tool's prefix
+  env_prefix: GIMLET_
+  # Config file name (without extension)
+  # Used for config file discovery: ~/.config/{vendor}/{config_name}.yaml
+  # Example: "fixtures" → ~/.config/fulmenhq/fixtures.yaml
+  # CDRL: Change "gimlet" to match your binary_name
+  config_name: gimlet
+  # Application description
+  # CDRL: Update to describe your microtool's purpose
+  description: "A Fulmen microtool template for single-purpose CLI tools"
+  # Version (can be overridden at build time)
+  version: "0.1.0"
+metadata:
+  # Service type (category from Fulmen taxonomy)
+  # For microtools, set this to "cli" (microtool is a CLI profile).
+  repository_category: cli
+
+# Optional: Template-specific metadata
+# CDRL: Update or remove these fields
+# project_url: https://github.com/fulmenhq/forge-microtool-gimlet
+# license: MIT
